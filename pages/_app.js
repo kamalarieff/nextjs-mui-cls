@@ -21,16 +21,16 @@ export default class MyApp extends App {
     });
 
     return (
-      <React.Fragment>
+      <StylesProvider generateClassName={generateClassName}>
         <Head>
           <title>My page</title>
         </Head>
-          <ThemeProvider theme={theme}>
-            {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-            <CssBaseline />
-            <Component {...pageProps} />
-          </ThemeProvider>
-      </React.Fragment>
+        <ThemeProvider theme={theme}>
+          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+          <CssBaseline />
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </StylesProvider>
     );
   }
 }
