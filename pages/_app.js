@@ -1,7 +1,7 @@
 import React from 'react';
 import App from 'next/app';
 import Head from 'next/head';
-import { ThemeProvider, StylesProvider, createGenerateClassName } from '@material-ui/styles';
+import { ThemeProvider } from '@material-ui/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../src/theme';
 
@@ -16,12 +16,9 @@ export default class MyApp extends App {
 
   render() {
     const { Component, pageProps } = this.props;
-    const generateClassName = createGenerateClassName({
-      productionPrefix: 'yoghirt',
-    });
 
     return (
-      <StylesProvider generateClassName={generateClassName}>
+      <React.Fragment>
         <Head>
           <title>My page</title>
         </Head>
@@ -30,7 +27,7 @@ export default class MyApp extends App {
           <CssBaseline />
           <Component {...pageProps} />
         </ThemeProvider>
-      </StylesProvider>
+      </React.Fragment>
     );
   }
 }
