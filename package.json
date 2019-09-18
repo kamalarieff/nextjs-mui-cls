@@ -7,13 +7,19 @@
     "@material-ui/styles": "latest",
     "clsx": "latest",
     "next": "latest",
+    "next-redux-wrapper": "^3.0.0",
     "prop-types": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.4"
   },
   "scripts": {
     "dev": "next",
     "build": "NODE_ENV=production next build",
     "start": "NODE_ENV=production next start"
+  },
+  "devDependencies": {
+    "redux-devtools-extension": "^2.13.8"
   }
 }
